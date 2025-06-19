@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hash Payload Injector</title>
+    <script>
+      window.onload = function () {
+        const payload = decodeURIComponent(location.hash.slice(1));
+        document.body.insertAdjacentHTML("beforeend", payload);
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Hash Payload Injector</h1>
+    <p>This page will inject any HTML payload passed in the URL fragment into the DOM using <code>insertAdjacentHTML</code>.</p>
+  </body>
+</html>
